@@ -11,6 +11,8 @@ if ( ! class_exists( 'WCEBL_Cart' ) ) :
             add_filter( 'woocommerce_product_single_add_to_cart_text', array($this, 'custom_cart_button_text'));
             add_filter( 'wc_add_to_cart_message_html', '__return_null' );
             add_filter( 'woocommerce_add_to_cart_validation', array($this, 'validate_add_cart_item' ), 10, 5);
+            if(get_option( 'wceb_is_product_sold_individually' ))
+                add_filter( 'woocommerce_is_sold_individually', array($this, 'remove_all_quantity_fields' ), 10, 5);
         }
         /**
          * Limits the number of cart items to 1.
@@ -59,6 +61,15 @@ if ( ! class_exists( 'WCEBL_Cart' ) ) :
             else{
                 $passed = false;
                 wc_add_notice( __( 'You can not do that', 'textdomain' ), 'error' );
+            }
+        }
+        public function remove_all_quantity_fields( $return, $product ) {
+            $cat = $product->get_categories();
+            $product_cats_ids = wp_get_post_terms( $product->get_id(), 'product_cat' );
+            for ($i=0; $i < count($product_cats_ids); $i++) { 
+                if($product_cats_ids[$i]->slug==="cars"){
+                return true;
+                }
             }
         }
     }
