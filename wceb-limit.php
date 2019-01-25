@@ -13,7 +13,6 @@ License: GPL2
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 /**
  * Checks whether the "WooCommerce" or "WooCommerce Easy Booking" plugin are activated. 
  */
