@@ -19,7 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $is_wc_active   = in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' )));
 $is_wceb_active = in_array( 'woocommerce-easy-booking-system/woocommerce-easy-booking.php', apply_filters( 'active_plugins', get_option( 'active_plugins' )));
-
 if ( $is_wc_active && $is_wceb_active ):
     /**
      * Compares date ranges whether they overlap or intersect and outputs those dates or boolean.
