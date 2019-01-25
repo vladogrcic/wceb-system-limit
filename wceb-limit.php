@@ -62,12 +62,12 @@ if ( !$is_wc_active ):
         $plugin_name = 'woocommerce';
         $plugin_title = 'Woocommerce';
         $install_link = '<a href="' . esc_url( network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . $plugin_name ) ) . '" class="thickbox" title="More info about ' . $plugin_name . '">Install ' . $plugin_title . '</a>';
-            ?>
-            <div class="error notice">
-                <p><?php _e( 'To use the "Woocommerce Easy Booking Limit" plugin, you need the "Woocommerce" plugin installed or activated if you have it already installed.', 'wc-required-install' ); ?></p>
-                <p><?php echo $install_link ?></p>
-            </div>
-            <?php
+        ?>
+        <div class="error notice">
+            <p><?php _e( 'To use the "Woocommerce Easy Booking Limit" plugin, you need the "Woocommerce" plugin installed or activated if you have it already installed.', 'wc-required-install' ); ?></p>
+            <p><?php echo $install_link ?></p>
+        </div>
+        <?php
     }
     add_action( 'admin_notices', 'wc_admin_notice' );
 endif;
@@ -79,12 +79,12 @@ if ( !$is_wceb_active ):
         $plugin_name = 'woocommerce-easy-booking-system';
         $plugin_title = 'Woocommerce Easy Booking System';
         $install_link = '<a href="' . esc_url( network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . $plugin_name ) ) . '" class="thickbox" title="More info about ' . $plugin_name . '">Install ' . $plugin_title . '</a>';
-            ?>
-            <div class="error notice">
-                <p><?php _e( 'To use the "Woocommerce Easy Booking Limit" plugin you need the "Woocommerce Easy Booking" plugin installed or activated if you have it already installed.', 'wceb-required-install' ); ?></p>
-                <p><?php echo $install_link ?></p>
-            </div>
-            <?php
+        ?>
+        <div class="error notice">
+            <p><?php _e( 'To use the "Woocommerce Easy Booking Limit" plugin you need the "Woocommerce Easy Booking" plugin installed or activated if you have it already installed.', 'wceb-required-install' ); ?></p>
+            <p><?php echo $install_link ?></p>
+        </div>
+        <?php
     }
     add_action( 'admin_notices', 'wceb_admin_notice' );
 endif;
