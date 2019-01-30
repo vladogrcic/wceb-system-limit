@@ -59,7 +59,7 @@ endif;
  */
 if ( !$is_wc_active ):
     function wc_admin_notice() {
-		if(get_current_screen()->id == "update") return;
+	if(get_current_screen()->id == "update") return;
         $plugin_name = 'woocommerce';
         $plugin_title = 'Woocommerce';
         $install_link = '<a href="' . esc_url( network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . $plugin_name ) ) . '" class="thickbox" title="More info about ' . $plugin_name . '">Install ' . $plugin_title . '</a>';
@@ -77,7 +77,7 @@ endif;
  */
 if ( !$is_wceb_active ):
     function wceb_admin_notice() {
-		if(get_current_screen()->id == "update") return;
+	if(get_current_screen()->id == "update") return;
         $plugin_name = 'woocommerce-easy-booking-system';
         $plugin_title = 'Woocommerce Easy Booking System';
         $install_link = '<a href="' . esc_url( network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . $plugin_name ) ) . '" class="thickbox" title="More info about ' . $plugin_name . '">Install ' . $plugin_title . '</a>';
