@@ -38,10 +38,11 @@ if ( ! class_exists( 'WCEBL_Cart' ) ) :
         /**
          * Changes the "Add to Cart" button text to the one you set in your settings.
          */
-        public function custom_cart_button_text() {
+        public function custom_cart_button_text($inputText) {
             $class = new WCEBL_Settings();
             $text = get_option( 'wceb_add_to_cart_text' );
-            return __($text, 'woocommerce');
+            if($text) return __($text, 'woocommerce');
+            else $inputText;
         }
         /**
          * Validates order details before adding it to the cart.
