@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WCEB Limit
-Description: Limits dates available for products provided by the "WooCommerce Easy Booking" plugin.
+Description: Limits dates available for products provided by the "WooCommerce Easy Booking plugin".
 Version: 1.0.0
 Author: Vlado Grčić
 Author URI: https://vladogrcic.com
