@@ -42,7 +42,7 @@ if ( ! class_exists( 'WCEBL_Cart' ) ) :
             $class = new WCEBL_Settings();
             $text = get_option( 'wceb_add_to_cart_text' );
             if($text) return __($text, 'woocommerce');
-            else $inputText;
+            else return $inputText;
         }
         /**
          * Validates order details before adding it to the cart.
